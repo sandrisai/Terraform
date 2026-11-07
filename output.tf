@@ -1,35 +1,27 @@
 output "vpc" {
-  value = aws_vpc.my-vpc.id
-
+  value = aws_vpc.VPC.id
+  
 }
-output "subnet" {
-  value = aws_subnet.my-subnet.id
-
+output "public-subnet" {
+  value = aws_subnet.My-subnet[*].id
+  
 }
-output "subnet0" {
-  value = aws_subnet.my-subnet1.id
-
+output "security_groups_id" {
+  value = aws_security_group.SG.id
+  
 }
 output "internet" {
-  value = aws_internet_gateway.IG.id
-
+  value = aws_internet_gateway.IGW.id
+  
 }
-output "security" {
-  value = aws_security_group.SG.id
-
+output "route_table_id" {
+  value = aws_route_table.Route.id
+  
 }
-output "instance" {
-  value = aws_instance.my-instance.id
-
+output "instance_id" {
+  value = aws_instance.instance[*].id
+  
 }
-output "instance0" {
-  value = aws_instance.my-instance1.id
-
-}
-output "ip" {
-  value = aws_instance.my-instance.public_ip
-
-}
-output "ip1" {
-  value = aws_instance.my-instance1.public_ip
+output "instance_public_ip"{
+  value = aws_instance.instance[*].public_ip
 }
