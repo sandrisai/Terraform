@@ -1,0 +1,36 @@
+
+# Terraform state files - DO NOT PUSH
+*.tfstate
+*.tfstate.*
+
+# Terraform working directory
+.terraform/
+
+# Terraform variable files - may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Allow example variable files
+!*.tfvars.example
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Private keys
+*.pem
+*.key
+
+# AWS credentials
+.aws/
+credentials
+
+# OS files
+.DS_Store
+Thumbs.db
